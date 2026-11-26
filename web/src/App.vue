@@ -132,6 +132,39 @@ const STACK: { key: Verdict; field: 'correct' | 'partial' | 'abstained' | 'wrong
   <main class="wrap">
     <section class="hero">
       <h1>AI機能を入れる前に、<br />正答率とコストを数字で出します。</h1>
+
+      <div class="about">
+        <p class="about-lead">
+          ハカルは、<strong>AIの答えがどれくらい当たっているかを、テストのように点数で測る道具</strong>です。
+        </p>
+        <p>
+          自社のサービスにAIのチャット（問い合わせ対応・社内ヘルプなど）を入れるとき、いちばん怖いのは、AIがもっともらしい嘘を言うことです。何問か試して「なんとなく大丈夫そう」で出してしまう代わりに、その「なんとなく」を数字に置き換えます。モデルを安いものに替えるときや、指示文を書き換えるときも、同じ問題で解かせて点数が下がっていないかを確かめられます。
+        </p>
+        <ol class="test-steps" aria-label="ハカルがやっていること">
+          <li>
+            <span class="num">1</span>
+            <strong>問題用紙を作る</strong>
+            <span>「チームプランは月いくら？」→ 正解「980円」のような、質問と正解の組を用意する</span>
+          </li>
+          <li>
+            <span class="num">2</span>
+            <strong>AIに解かせる</strong>
+            <span>同じ問題を、条件を変えたAIに解かせる（社内の資料を渡す／渡さない、ローカルのAI／Claude など）</span>
+          </li>
+          <li>
+            <span class="num">3</span>
+            <strong>採点する</strong>
+            <span>正解のキーワードが入っているかと、採点役のAIの判定の2つで採点し、最後は人が見直す</span>
+          </li>
+          <li>
+            <span class="num">4</span>
+            <strong>成績表を出す</strong>
+            <span>正答率・嘘をついた割合・1問あたりの費用を並べ、悪くなった問題を一覧にする</span>
+          </li>
+        </ol>
+      </div>
+
+      <h2 class="sample-head">この画面の見本について</h2>
       <p class="lead">
         社内ヘルプのAIを想定し、同じ30問を3つの構成で答えさせて採点しました。下の数字はすべてこの画面のために実際に動かした結果です（各構成1回・2026-11-26）。AI審判の採点に誤りがあり人が検算して直した問題は、直した理由を1問ずつ残しています。
       </p>
