@@ -104,6 +104,15 @@ watch(baseId, (v) => {
 const humanFixed = (id: string) => runs.value[id]?.items.filter((i) => i.humanNote).length ?? 0
 
 const verdictClass = (v: Verdict) => `v v-${v.toLowerCase()}`
+
+/** 判定内訳の積み上げ棒（左から よい → わるい の順） */
+const STACK: { key: Verdict; field: 'correct' | 'partial' | 'abstained' | 'wrong' | 'hallucination' }[] = [
+  { key: 'Correct', field: 'correct' },
+  { key: 'Partial', field: 'partial' },
+  { key: 'Abstained', field: 'abstained' },
+  { key: 'Wrong', field: 'wrong' },
+  { key: 'Hallucination', field: 'hallucination' },
+]
 </script>
 
 <template>
@@ -132,6 +141,27 @@ const verdictClass = (v: Verdict) => `v v-${v.toLowerCase()}`
     </section>
 
     <p v-if="error" class="error">結果を読み込めませんでした: {{ error }}</p>
+
+    <section v-if="index.length" class="block">
+      <h2>30問の判定の内訳</h2>
+      <div class="stacks">
+        <div v-for="e in index" :key="e.runId" class="stack-row">
+          <div class="stack-label">{{ runName(e) }}</div>
+          <div class="stack" role="img" :aria-label="`${runName(e)}: ${STACK.map((x) => `${VERDICT_LABEL[x.key]} ${e.summary[x.field]}問`).join('、')}`">
+            <span
+              v-for="x in STACK.filter((x) => e.summary[x.field] > 0)"
+              :key="x.key"
+              :class="`seg seg-${x.key.toLowerCase()}`"
+              :style="{ flexGrow: e.summary[x.field] }"
+              :title="`${VERDICT_LABEL[x.key]} ${e.summary[x.field]}問`"
+            >{{ e.summary[x.field] }}</span>
+          </div>
+        </div>
+      </div>
+      <ul class="legend">
+        <li v-for="x in STACK" :key="x.key"><span :class="`dot seg-${x.key.toLowerCase()}`"></span>{{ VERDICT_LABEL[x.key] }}</li>
+      </ul>
+    </section>
 
     <section v-if="index.length && best" class="block">
       <h2>3つの構成の比較</h2>
