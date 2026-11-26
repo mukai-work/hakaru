@@ -4,6 +4,7 @@ import type { IndexEntry, ItemResult, RunResult, Verdict } from './types'
 import { VERDICT_LABEL, VERDICT_RANK } from './types'
 
 const CONTACT = 'info@mukai.works'
+const BASE = import.meta.env.BASE_URL
 
 const index = ref<IndexEntry[]>([])
 const runs = ref<Record<string, RunResult>>({})
@@ -15,12 +16,12 @@ const filter = ref<'all' | 'bad' | 'review' | 'changed'>('changed')
 
 onMounted(async () => {
   try {
-    const res = await fetch('./data/index.json')
+    const res = await fetch(`${BASE}data/index.json`)
     if (!res.ok) throw new Error(`index.json を読めません（${res.status}）`)
     index.value = await res.json()
     const loaded = await Promise.all(
       index.value.map(async (e) => {
-        const r = await fetch(`./data/${e.file}`)
+        const r = await fetch(`${BASE}data/${e.file}`)
         return [e.runId, (await r.json()) as RunResult] as const
       }),
     )
@@ -112,7 +113,10 @@ const verdictClass = (v: Verdict) => `v v-${v.toLowerCase()}`
         <span class="logo" aria-hidden="true">ハ</span>
         <span><strong>ハカル</strong><small>AI機能の精度チェック台</small></span>
       </div>
-      <a class="studio" href="https://mukai.works" target="_blank" rel="noopener">ムカイクリエイトスタジオ</a>
+      <nav class="studio-nav" aria-label="作った人">
+        <a class="studio" href="https://mukai.works/products">ほかの製品</a>
+        <a class="studio" href="https://mukai.works/engineer">開発者のプロフィール</a>
+      </nav>
     </div>
   </header>
 
@@ -120,7 +124,7 @@ const verdictClass = (v: Verdict) => `v v-${v.toLowerCase()}`
     <section class="hero">
       <h1>AI機能を入れる前に、<br />正答率とコストを数字で出します。</h1>
       <p class="lead">
-        社内ヘルプのAIを想定し、同じ30問を3つの構成で答えさせて採点しました。下の数字はすべてこの画面のために実際に動かした結果です。AI審判の採点に誤りがあり人が検算して直した問題は、直した理由を1問ずつ残しています。
+        社内ヘルプのAIを想定し、同じ30問を3つの構成で答えさせて採点しました。下の数字はすべてこの画面のために実際に動かした結果です（各構成1回・2026-11-26）。AI審判の採点に誤りがあり人が検算して直した問題は、直した理由を1問ずつ残しています。
       </p>
       <p class="note">
         題材は架空の会社「ソラノート株式会社」の社内文書8本です。30問のうち4問は、文書に答えが無い質問です（「分かりません」と答えるのが正解）。
@@ -158,8 +162,8 @@ const verdictClass = (v: Verdict) => `v v-${v.toLowerCase()}`
         </table>
       </div>
       <p class="caption">
-        太字はその列で一番よい値。費用はローカルLLMは電気代を除き0円。Claudeは <code>claude -p</code>（Claude Code経由）が報告した額で、Claude Code自体の指示文（1問あたり入力約8万トークン）を含むため、APIを直接呼ぶ場合より大幅に高く出ています。応答時間は回答にかかった時間のみ（採点の時間は含まない）。
-        「人の確認が必要」は、キーワード照合とAI審判の判定が食い違った問題の数です。「人が修正」は、AI審判の誤りを人が検算して直した問題の数で、直した理由は1問ずつの欄に残しています。
+        太字はその列で一番よい値。費用はローカルLLMは電気代を除き0円。Claudeは <code>claude -p</code>（Claude Code経由）が報告した額で、質問と社内文書のほかに Claude Code 側の文脈も送っていて（内訳は未調査）、入力は1問あたり平均約17万トークン（キャッシュの読み書きを含む合計）でした。同じ内容を Qwen に送ったときは約1,200トークンなので、APIを直接呼ぶ場合の費用とは別物です。応答時間も <code>claude -p</code> の起動を含みます。応答時間は回答にかかった時間のみ（採点の時間は含まない）。
+        「人の確認が必要」は、キーワード照合とAI審判の判定が食い違った問題の数です。「人が修正」は、AI審判の判定を人が読んで直した問題の数で、直した理由は1問ずつの欄に残しています。審判のままだと文書ありの Qwen が100%、Claude Haiku が96.7%で、順位が逆でした。
       </p>
     </section>
 
@@ -254,13 +258,16 @@ const verdictClass = (v: Verdict) => `v v-${v.toLowerCase()}`
         <li>まずは対象を1機能に絞った、固定価格の小さな検証から</li>
         <li>夜間・土日に進め、進み具合は毎週文書でご報告します</li>
       </ul>
-      <a class="button" :href="`mailto:${CONTACT}?subject=${encodeURIComponent('ハカルについて')}`">{{ CONTACT }} に相談する</a>
+      <div class="cta-row">
+        <a class="button" :href="`mailto:${CONTACT}?subject=${encodeURIComponent('ハカルについて')}`">{{ CONTACT }} に相談する</a>
+        <a class="sub-link" href="https://mukai.works/engineer">作った人の経歴を見る</a>
+      </div>
     </section>
   </main>
 
   <footer class="foot">
     <div class="wrap">
-      ハカル — ムカイクリエイトスタジオ ／ 評価エンジンは C#（.NET 10）、この画面は Vue 3 で作っています。画面はあらかじめ計算した結果を表示するだけで、AIは呼び出しません。
+      ハカル — <a href="https://mukai.works">ムカイクリエイトスタジオ（ムカイ）</a> ／ <a href="https://github.com/mukai-work/hakaru">コード（GitHub）</a> ／ 評価エンジンは C#（.NET 10）、この画面は Vue 3 で作っています。画面はあらかじめ計算した結果を表示するだけで、AIは呼び出しません。
     </div>
   </footer>
 </template>

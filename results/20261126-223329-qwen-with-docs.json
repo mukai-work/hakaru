@@ -8,13 +8,13 @@
   "dataset": "sorano-faq.jsonl",
   "summary": {
     "total": 30,
-    "correct": 30,
+    "correct": 29,
     "partial": 0,
-    "wrong": 0,
+    "wrong": 1,
     "hallucination": 0,
     "abstained": 0,
     "needsReview": 0,
-    "accuracy": 1,
+    "accuracy": 0.9667,
     "hallucinationRate": 0,
     "totalCostUsd": 0,
     "costPerQuestionUsd": 0,
@@ -78,7 +78,7 @@
       "expected": "2\u304B\u6708\u5206\u5272\u5F15\uFF0812\u304B\u6708\u5206\u309210\u304B\u6708\u5206\u306E\u6599\u91D1\uFF09",
       "answerable": true,
       "answer": "\u30C1\u30FC\u30E0\u30D7\u30E9\u30F3\u3068\u30D3\u30B8\u30CD\u30B9\u30D7\u30E9\u30F3\u306F\u3001\u5E74\u6255\u3044\u306B\u3059\u308B\u3053\u3068\u30672\u304B\u6708\u5206\u304C\u5272\u5F15\u3055\u308C\u307E\u3059\u3002\u5177\u4F53\u7684\u306B\u306F12\u304B\u6708\u5206\u306E\u6599\u91D1\u306710\u304B\u6708\u5206\u3092\u5229\u7528\u3067\u304D\u307E\u3059\u3002",
-      "verdict": "Correct",
+      "verdict": "Wrong",
       "judgeReason": "\u671F\u5F85\u56DE\u7B54\u3068\u540C\u3058\u5185\u5BB9\u3092\u6587\u66F8\u306B\u57FA\u3065\u3044\u3066\u8FF0\u3079\u3066\u3044\u308B",
       "keywordHit": true,
       "needsReview": false,
@@ -86,8 +86,8 @@
       "outputTokens": 34,
       "latencySeconds": 6.02,
       "costUsd": 0,
-      "judgeVerdict": null,
-      "humanNote": null
+      "judgeVerdict": "Correct",
+      "humanNote": "\u4EBA\u304C\u78BA\u8A8D: 2\u6587\u76EE\u300C12\u304B\u6708\u5206\u306E\u6599\u91D1\u306710\u304B\u6708\u5206\u3092\u5229\u7528\u3067\u304D\u307E\u3059\u300D\u306F\u6587\u66F8\uFF0812\u304B\u6708\u5206\u309210\u304B\u6708\u5206\u306E\u6599\u91D1\u3067\u63D0\u4F9B\uFF09\u3068\u9006\u3002\u5BE9\u5224\u306F\u6B63\u3057\u3044\u3068\u5224\u5B9A\u3057\u3001\u30AD\u30FC\u30EF\u30FC\u30C9\uFF082\u304B\u6708\uFF09\u3082\u4E00\u81F4\u3057\u305F\u305F\u3081\u8981\u78BA\u8A8D\u306B\u306A\u3089\u306A\u304B\u3063\u305F"
     },
     {
       "id": "q05",

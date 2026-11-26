@@ -8,14 +8,14 @@
   "dataset": "sorano-faq.jsonl",
   "summary": {
     "total": 30,
-    "correct": 3,
+    "correct": 4,
     "partial": 3,
-    "wrong": 10,
-    "hallucination": 8,
+    "wrong": 12,
+    "hallucination": 5,
     "abstained": 6,
-    "needsReview": 3,
-    "accuracy": 0.1,
-    "hallucinationRate": 0.2667,
+    "needsReview": 0,
+    "accuracy": 0.1333,
+    "hallucinationRate": 0.1667,
     "totalCostUsd": 0,
     "costPerQuestionUsd": 0,
     "avgLatencySeconds": 3.87
@@ -34,7 +34,9 @@
       "inputTokens": 61,
       "outputTokens": 13,
       "latencySeconds": 3.38,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q02",
@@ -49,7 +51,9 @@
       "inputTokens": 61,
       "outputTokens": 25,
       "latencySeconds": 3.2,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q03",
@@ -64,7 +68,9 @@
       "inputTokens": 60,
       "outputTokens": 27,
       "latencySeconds": 3.42,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q04",
@@ -79,7 +85,9 @@
       "inputTokens": 61,
       "outputTokens": 21,
       "latencySeconds": 3.4,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q05",
@@ -94,7 +102,9 @@
       "inputTokens": 58,
       "outputTokens": 29,
       "latencySeconds": 3.5,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q06",
@@ -109,7 +119,9 @@
       "inputTokens": 70,
       "outputTokens": 31,
       "latencySeconds": 3.96,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q07",
@@ -124,7 +136,9 @@
       "inputTokens": 66,
       "outputTokens": 31,
       "latencySeconds": 3.89,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q08",
@@ -139,7 +153,9 @@
       "inputTokens": 62,
       "outputTokens": 32,
       "latencySeconds": 3.9,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q09",
@@ -154,7 +170,9 @@
       "inputTokens": 60,
       "outputTokens": 44,
       "latencySeconds": 5.2,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q10",
@@ -169,7 +187,9 @@
       "inputTokens": 58,
       "outputTokens": 35,
       "latencySeconds": 4.48,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q11",
@@ -184,7 +204,9 @@
       "inputTokens": 60,
       "outputTokens": 36,
       "latencySeconds": 4.81,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q12",
@@ -199,7 +221,9 @@
       "inputTokens": 67,
       "outputTokens": 18,
       "latencySeconds": 2.92,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q13",
@@ -214,7 +238,9 @@
       "inputTokens": 59,
       "outputTokens": 41,
       "latencySeconds": 5.1,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q14",
@@ -229,7 +255,9 @@
       "inputTokens": 60,
       "outputTokens": 39,
       "latencySeconds": 4.57,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q15",
@@ -244,7 +272,9 @@
       "inputTokens": 61,
       "outputTokens": 25,
       "latencySeconds": 3.14,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q16",
@@ -259,7 +289,9 @@
       "inputTokens": 61,
       "outputTokens": 32,
       "latencySeconds": 3.84,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q17",
@@ -270,11 +302,13 @@
       "verdict": "Correct",
       "judgeReason": "IE\u975E\u5BFE\u5FDC\u3092\u6B63\u3057\u304F\u56DE\u7B54\u3057\u3001\u671F\u5F85\u5185\u5BB9\u3068\u4E00\u81F4",
       "keywordHit": false,
-      "needsReview": true,
+      "needsReview": false,
       "inputTokens": 58,
       "outputTokens": 21,
       "latencySeconds": 2.68,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": "Correct",
+      "humanNote": "\u4EBA\u304C\u78BA\u8A8D: \u300C\u30B5\u30DD\u30FC\u30C8\u5BFE\u8C61\u5916\u300D\u306FIE\u975E\u5BFE\u5FDC\u3068\u540C\u3058\u5185\u5BB9\u3002\u30AD\u30FC\u30EF\u30FC\u30C9\u306E\u8A00\u3044\u63DB\u3048\u6F0F\u308C"
     },
     {
       "id": "q18",
@@ -289,7 +323,9 @@
       "inputTokens": 58,
       "outputTokens": 32,
       "latencySeconds": 3.83,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q19",
@@ -304,7 +340,9 @@
       "inputTokens": 60,
       "outputTokens": 22,
       "latencySeconds": 2.87,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q20",
@@ -319,7 +357,9 @@
       "inputTokens": 60,
       "outputTokens": 24,
       "latencySeconds": 3.6,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q21",
@@ -327,14 +367,16 @@
       "expected": "1\u3064\u306E\u30EF\u30FC\u30AF\u30B9\u30DA\u30FC\u30B9\u3067\u6700\u59275\u500B",
       "answerable": true,
       "answer": "API\u30AD\u30FC\u306E\u4F5C\u6210\u6570\u306B\u4E0A\u9650\u306F\u8A2D\u3051\u3066\u304A\u308A\u307E\u305B\u3093\u306E\u3067\u3001\u5FC5\u8981\u306B\u5FDC\u3058\u3066\u4F55\u5EA6\u3067\u3082\u751F\u6210\u53EF\u80FD\u3067\u3059\u3002\u5404\u30AD\u30FC\u306B\u306F\u9069\u5207\u306A\u6A29\u9650\u8A2D\u5B9A\u3092\u884C\u3044\u3001\u7BA1\u7406\u3092\u304A\u9858\u3044\u3044\u305F\u3057\u307E\u3059\u3002",
-      "verdict": "Hallucination",
+      "verdict": "Wrong",
       "judgeReason": "\u6587\u66F8\u3067\u306F\u6700\u59275\u500B\u3068\u5236\u9650\u3055\u308C\u3066\u3044\u308B\u306E\u306B\u3001\u7121\u5236\u9650\u3068\u8AA4\u7B54\u3057\u3066\u3044\u308B",
       "keywordHit": false,
       "needsReview": false,
       "inputTokens": 60,
       "outputTokens": 35,
       "latencySeconds": 4.46,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": "Hallucination",
+      "humanNote": "\u4EBA\u304C\u78BA\u8A8D: \u6587\u66F8\u306F\u6700\u59275\u500B\u3068\u660E\u8A18\u3002\u4E0A\u9650\u306A\u3057\u306F\u6587\u66F8\u3068\u98DF\u3044\u9055\u3046\u56DE\u7B54\u306A\u306E\u3067\u3001q02\uFF085\u540D\uFF09\u3068\u540C\u3058\u304F\u9593\u9055\u3044\u306B\u63C3\u3048\u308B"
     },
     {
       "id": "q22",
@@ -349,7 +391,9 @@
       "inputTokens": 59,
       "outputTokens": 25,
       "latencySeconds": 3.41,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q23",
@@ -357,14 +401,16 @@
       "expected": "\u53D6\u308A\u8FBC\u307F\u306B\u5BFE\u5FDC\u3057\u3066\u3044\u308B",
       "answerable": true,
       "answer": "\u306F\u3044\u3001Notion\u304B\u3089\u306E\u30C7\u30FC\u30BF\u79FB\u884C\u306F\u30B5\u30DD\u30FC\u30C8\u3057\u3066\u304A\u308A\u307E\u3059\u3002\u8A73\u7D30\u306A\u624B\u9806\u306B\u3064\u3044\u3066\u306F\u30D8\u30EB\u30D7\u30BB\u30F3\u30BF\u30FC\u3092\u3054\u78BA\u8A8D\u304F\u3060\u3055\u3044\u3002",
-      "verdict": "Hallucination",
+      "verdict": "Correct",
       "judgeReason": "\u6587\u66F8\u306B\u300C\u30D8\u30EB\u30D7\u30BB\u30F3\u30BF\u30FC\u300D\u306E\u8A18\u8F09\u306F\u306A\u304F\u3001\u5B58\u5728\u3057\u306A\u3044\u60C5\u5831\u3092\u65AD\u5B9A\u3057\u3066\u3044\u308B\u305F\u3081\u3002",
       "keywordHit": true,
-      "needsReview": true,
+      "needsReview": false,
       "inputTokens": 59,
       "outputTokens": 22,
       "latencySeconds": 3.08,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": "Hallucination",
+      "humanNote": "\u4EBA\u304C\u78BA\u8A8D: Notion\u304B\u3089\u306E\u79FB\u884C\u306B\u5BFE\u5FDC\u3057\u3066\u3044\u308B\u70B9\u306F\u671F\u5F85\u56DE\u7B54\u3068\u540C\u3058\u3002\u30D8\u30EB\u30D7\u30BB\u30F3\u30BF\u30FC\u3078\u306E\u8A00\u53CA\u3060\u3051\u3067\u3067\u3063\u3061\u3042\u3052\u3068\u306F\u3057\u306A\u3044"
     },
     {
       "id": "q24",
@@ -379,7 +425,9 @@
       "inputTokens": 61,
       "outputTokens": 32,
       "latencySeconds": 3.96,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q25",
@@ -394,7 +442,9 @@
       "inputTokens": 58,
       "outputTokens": 30,
       "latencySeconds": 3.56,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q26",
@@ -409,7 +459,9 @@
       "inputTokens": 61,
       "outputTokens": 35,
       "latencySeconds": 4.12,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q27",
@@ -424,7 +476,9 @@
       "inputTokens": 60,
       "outputTokens": 33,
       "latencySeconds": 3.93,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q28",
@@ -432,14 +486,16 @@
       "expected": "\u500B\u5225\u898B\u7A4D\uFF08\u91D1\u984D\u306F\u8A18\u8F09\u306A\u3057\uFF09",
       "answerable": true,
       "answer": "\u30BD\u30E9\u30CE\u30FC\u30C8\u306E\u30D8\u30EB\u30D7\u30C7\u30B9\u30AF\u3067\u306F\u3001\u5916\u90E8\u30B5\u30FC\u30D3\u30B9\u304B\u3089\u306E\u30C7\u30FC\u30BF\u79FB\u884C\u4EE3\u884C\u3084\u30D3\u30B8\u30CD\u30B9\u30D7\u30E9\u30F3\u306E\u6599\u91D1\u306B\u95A2\u3059\u308B\u500B\u5225\u898B\u7A4D\u3082\u308A\u306F\u627F\u3063\u3066\u304A\u308A\u307E\u305B\u3093\u3002\u8A73\u7D30\u306A\u6599\u91D1\u4F53\u7CFB\u3084\u79FB\u884C\u30B5\u30DD\u30FC\u30C8\u306B\u3064\u3044\u3066\u306F\u3001\u516C\u5F0F\u30B5\u30A4\u30C8\u307E\u305F\u306F\u55B6\u696D\u7A93\u53E3\u3078\u76F4\u63A5\u304A\u554F\u3044\u5408\u308F\u305B\u304F\u3060\u3055\u3044\u3002",
-      "verdict": "Hallucination",
+      "verdict": "Wrong",
       "judgeReason": "\u6587\u66F8\u306B\u306F\u6709\u511F\u3067\u53D7\u3051\u4ED8\u3051\u308B\u3068\u8A18\u8F09\u3055\u308C\u3066\u3044\u308B\u306E\u306B\u3001\u627F\u3063\u3066\u3044\u306A\u3044\u3068\u5426\u5B9A\u3057\u3066\u3044\u308B\u305F\u3081\u3002",
       "keywordHit": true,
-      "needsReview": true,
+      "needsReview": false,
       "inputTokens": 60,
       "outputTokens": 48,
       "latencySeconds": 5.4,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": "Hallucination",
+      "humanNote": "\u4EBA\u304C\u78BA\u8A8D: \u6587\u66F8\u306F\u79FB\u884C\u4EE3\u884C\u3092\u6709\u511F\u3067\u53D7\u3051\u4ED8\u3051\u308B\u3068\u3042\u308A\u3001\u627F\u3063\u3066\u3044\u306A\u3044\u3068\u3044\u3046\u56DE\u7B54\u306F\u6587\u66F8\u3068\u98DF\u3044\u9055\u3046\uFF08\u8A18\u4E8B\u306E\u5B9A\u7FA9\u3067\u306F\u9593\u9055\u3044\uFF09"
     },
     {
       "id": "q29",
@@ -454,7 +510,9 @@
       "inputTokens": 58,
       "outputTokens": 30,
       "latencySeconds": 3.57,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     },
     {
       "id": "q30",
@@ -469,7 +527,9 @@
       "inputTokens": 68,
       "outputTokens": 38,
       "latencySeconds": 5,
-      "costUsd": 0
+      "costUsd": 0,
+      "judgeVerdict": null,
+      "humanNote": null
     }
   ]
 }
