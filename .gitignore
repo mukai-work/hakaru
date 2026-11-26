@@ -1,0 +1,7 @@
+bin/
+obj/
+node_modules/
+web/dist/
+web/public/data/
+results_run.log
+PROJECT.md

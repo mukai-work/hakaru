@@ -1,0 +1,30 @@
+{"id":"q01","question":"チームプランは1人あたり月いくらですか？","expected":"1人あたり月額980円（税抜）","keywords":["980"],"answerable":true}
+{"id":"q02","question":"フリープランでは何人まで使えますか？","expected":"3人まで","keywords":["3人"],"answerable":true}
+{"id":"q03","question":"ビジネスプランは何人から契約できますか？","expected":"最低10人から","keywords":["10人"],"answerable":true}
+{"id":"q04","question":"年払いにするとどれくらい安くなりますか？","expected":"2か月分割引（12か月分を10か月分の料金）","keywords":["2か月|2ヶ月|2カ月|二か月"],"answerable":true}
+{"id":"q05","question":"NPOの割引はありますか？","expected":"申請によりチームプランが50%割引","keywords":["50"],"answerable":true}
+{"id":"q06","question":"月払いを月の途中で解約したら、残りの日数分は返金されますか？","expected":"日割りの返金はしない。解約は当月末で有効","keywords":["返金しない|返金されません|返金はありません|返金は行わない|返金はしない|日割りの返金はありません|日割り返金はありません"],"answerable":true}
+{"id":"q07","question":"年払いを契約して1週間で解約したら返金されますか？","expected":"契約から14日以内なので全額返金される","keywords":["14日","全額"],"answerable":true}
+{"id":"q08","question":"解約後、データはいつまで残りますか？","expected":"30日間保管され、その後完全に削除される","keywords":["30日"],"answerable":true}
+{"id":"q09","question":"返金にはどれくらいかかりますか？","expected":"最大10営業日","keywords":["10営業日"],"answerable":true}
+{"id":"q10","question":"データはどこに保管されていますか？","expected":"東京リージョン（バックアップは大阪リージョン）","keywords":["東京"],"answerable":true}
+{"id":"q11","question":"バックアップは何日分保持されますか？","expected":"7日分（1日1回取得）","keywords":["7日"],"answerable":true}
+{"id":"q12","question":"監査ログはどのプランで使えて、何年保持されますか？","expected":"ビジネスプランのみ、保持期間は1年","keywords":["ビジネス","1年"],"answerable":true}
+{"id":"q13","question":"SOC 2は取得していますか？","expected":"未取得。2027年中の取得を目指して準備中（ISMSは取得済み）","keywords":["2027"],"answerable":true}
+{"id":"q14","question":"チームプランのサポートの返信目安は？","expected":"1営業日以内（メールとチャット）","keywords":["1営業日"],"answerable":true}
+{"id":"q15","question":"電話サポートはどのプランで使えますか？","expected":"ビジネスプランのみ","keywords":["ビジネス"],"answerable":true}
+{"id":"q16","question":"土曜日にサポートは受け付けていますか？","expected":"受け付けていない。平日10:00〜18:00のみ","keywords":["平日"],"answerable":true}
+{"id":"q17","question":"Internet Explorerで使えますか？","expected":"対応していない","keywords":["対応していません|対応しない|非対応|使えません|利用できません|サポートされていません|対応しておりません"],"answerable":true}
+{"id":"q18","question":"オフラインで編集できますか？","expected":"デスクトップアプリのみオフライン編集でき、再接続時に自動同期","keywords":["デスクトップ"],"answerable":true}
+{"id":"q19","question":"APIの呼び出し回数の上限は？","expected":"1つのAPIキーにつき毎分60回。超えるとHTTP 429","keywords":["60"],"answerable":true}
+{"id":"q20","question":"フリープランでAPIは使えますか？","expected":"使えない（チームプランとビジネスプランのみ）","keywords":["使えません|使えない|利用できません|ご利用いただけません|対象外|できません"],"answerable":true}
+{"id":"q21","question":"APIキーは何個まで作れますか？","expected":"1つのワークスペースで最大5個","keywords":["5個|5つ|五つ"],"answerable":true}
+{"id":"q22","question":"請求書払いは使えますか？","expected":"ビジネスプランで年額30万円以上の契約のみ","keywords":["30万"],"answerable":true}
+{"id":"q23","question":"Notionからデータを移せますか？","expected":"取り込みに対応している","keywords":["Notion"],"answerable":true}
+{"id":"q24","question":"1回に取り込めるファイルの上限は？","expected":"500件、合計2GBまで","keywords":["500"],"answerable":true}
+{"id":"q25","question":"Slackと連携できますか？","expected":"文書に記載なし（わからないと答えるのが正しい）","keywords":[],"answerable":false}
+{"id":"q26","question":"ソラノートの創業者は誰ですか？","expected":"文書に記載なし（わからないと答えるのが正しい）","keywords":[],"answerable":false}
+{"id":"q27","question":"Linux版のデスクトップアプリはありますか？","expected":"文書に記載なし（対応環境はWindows 11とmacOS 14以上のみ記載）","keywords":[],"answerable":false}
+{"id":"q28","question":"ビジネスプランの移行代行はいくらですか？","expected":"個別見積（金額は記載なし）","keywords":["見積"],"answerable":true}
+{"id":"q29","question":"PayPayで支払えますか？","expected":"文書に記載なし（支払い方法はクレジットカード4種と請求書払いのみ記載）","keywords":[],"answerable":false}
+{"id":"q30","question":"障害が起きた時、ビジネスプランだと何時間以内に連絡がもらえますか？","expected":"初回連絡は1時間以内","keywords":["1時間"],"answerable":true}

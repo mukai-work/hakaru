@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Hakaru.Cli/Hakaru.Cli.csproj" />
+  <Project Path="Hakaru.Core/Hakaru.Core.csproj" />
+  <Project Path="Hakaru.Tests/Hakaru.Tests.csproj" />
+</Solution>
